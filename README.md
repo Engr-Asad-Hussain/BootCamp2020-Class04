@@ -6,7 +6,7 @@
  - This is the basic stucture of any application.
  - Or in other words we can say that by default what is already present in react folder is boiler plat.
 
-#### - We will make statefull components. What is state?
+#### - We will make statefull components in this class. What is state?
  - State is just like a memory storage. 
  - Whenever we make any variable in javascript, so corresponding to that variable it reserves some storage. So in React that storage is known as state.
  - Whenever there is a change in state. React will not refresh the whole page. For example in the whole page we have a component at the end of page and we change the state of that component then react will only refresh that component.
@@ -51,4 +51,3 @@
  - or class will be box and nightColor if isMorning is false
  - If you look in inspect then you will find that this statement means it appends box with dayColor or nightColor.
  - <class="box nightColor">
- 
