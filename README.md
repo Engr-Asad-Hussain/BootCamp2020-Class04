@@ -50,4 +50,4 @@
  - It means that class is box and dayColor if isMorning is true
  - or class will be box and nightColor if isMorning is false
  - If you look in inspect then you will find that this statement means it appends box with dayColor or nightColor.
- - <class="box nightColor">
+ - <class="box nightColor"> Output of inspect in browser.

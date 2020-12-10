@@ -47,7 +47,6 @@ useState is not persistant. And whenever you are using react,
 react is a SPA (single page application),  we donot refresh the complete 
 page, the VDOM of react will refresh only that component which has changed. 
 We called it as a sin in react.
-
 7. "class" is a keyword used in normal CSS but in react we use "className"
     and in App.css file we declare using .box{}
-*/ 
+*/
