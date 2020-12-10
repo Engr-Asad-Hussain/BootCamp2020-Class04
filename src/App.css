@@ -1,11 +1,17 @@
-.box {
-  height: 200px;
+.button {
+  padding: 10px;
+  color: aliceblue;
+  margin: 0px 5px;
+  box-shadow: -2px -2px 6px black;
 }
 
-.dayColor {
-  background-color: rgb(228, 225, 92);
+.incrementButton {
+  background-color: green;
+}
+.decrementButton {
+  background-color: red;
 }
 
-.nightColor {
-  background-color: darkgray;
+.checkBox {
+  margin: 0px 10px;
 }
