@@ -5,7 +5,7 @@ import {Message} from './message';
 import './App.css';
 
 export default function App() {
-  let [count, setCount] = useState(5); 
+  let [count, setCount] = useState(0); 
   // useState will return an array.
   // value will save in count
   let [isMorning, setMorning] = useState();
@@ -13,41 +13,57 @@ export default function App() {
   return (
     <div className={`box ${isMorning ? 'dayColor' : 'nightColor'}`}>
       <h2>Today's Whether is : {isMorning ? 'Day' : 'Night'}</h2>
-      <button onClick={
+      <button className="button" onClick={
+        ()=> setMorning(true)
+      }>
+        Day
+      </button>
+
+      <button className="button" onClick={
+        ()=> setMorning(false)
+      }>
+        Night
+      </button>
+
+      <button className="button" onClick={
         ()=> setMorning(!isMorning)
       }>
-        Uptade Whether
+        Toggle
       </button>
+      <hr />
       
       <Message counter={count}/>
-      <button onClick={
-        ()=> setCount(++count)
-        }>
-          Counter Update
+      
+
+      <button className="button" onClick={
+        ()=> {
+          if (count < 10) {
+            setCount(++count);
+          } else {
+            alert("Danger: You are getting out of Range !\nYou need to Decrement");
+          }
+        }
+      }>
+          Increment Counter
+      </button>
+
+      <button className="button" onClick={
+        ()=> {
+          if (count > -10) {
+            setCount(--count);
+          } else {
+            alert("Danger: You are getting out of Range !\nYou need to Increment");
+          }
+        }
+      }>
+        Decrement Counter
+      </button>
+
+      <button className="button" onClick={
+        ()=> setCount(0)
+      }>
+        Reset Counter
       </button>
     </div>
   );
 }
-
-/* 
-1. Button will run on onClick event. There maybe named or anonymous function.
-2. () => {} This is an anonymous function because () represents
-and there is no name of a funtion.
-3. Example onClick={
-    ()=> alert("Button is Pressed")
-  }
-4. Example onClick={
-    ()=> setCount(4)
-  }
-5. Example onClick={
-    ()=> setCount(count+1)
-  }
-6. On refresh all the varaibles are set to inital value. It means that 
-useState is not persistant. And whenever you are using react, 
-react is a SPA (single page application),  we donot refresh the complete 
-page, the VDOM of react will refresh only that component which has changed. 
-We called it as a sin in react.
-
-7. "class" is a keyword used in normal CSS but in react we use "className"
-    and in App.css file we declare using .box{}
-*/ 
