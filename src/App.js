@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <div className={`box ${isMorning ? 'dayColor' : 'nightColor'}`}>
-      <h2>Today's Whether is : {isMorning ? 'Day' : 'Night'}</h2>
+      <h2>Today's Whether is :: {isMorning ? 'Day' : 'Night'}</h2>
       <button onClick={
         ()=> setMorning(!isMorning)
       }>
